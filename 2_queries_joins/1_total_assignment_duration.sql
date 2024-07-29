@@ -1,7 +1,8 @@
 -- Get the total amount of time that a student has spent on all assignments.
+-- This should work for any student but use 'Ibrahim Schimmel' for now.
+-- Select only the total amount of time as a single column.
 
 SELECT sum(duration) as total_duration
   FROM assignment_submissions
   JOIN students ON student_id = students.id
-  JOIN cohorts ON cohort_id = cohorts.id
-  WHERE cohorts.name = 'FEB12';
+  WHERE students.name = 'Ibrahim Schimmel';
